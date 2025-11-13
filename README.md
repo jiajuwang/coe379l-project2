@@ -1,8 +1,11 @@
 Pull the docker image: docker pull jiajuwang/damage-detection:latest
+
 Run the docker: docker run -d -p 5000:5000 --name damage-detection-server jiajuwang/damage-detection:latest
 
 GET/summary
+
 response:
+
 {
     "status": "ok",
     "image_size": "150x150",
@@ -11,13 +14,17 @@ response:
 }
 
 POST/inference
+
 header:
+
 {
     files: {
         image: BufferedReader[_BufferedReaderStream]
     }
 }
+
 response:
+
 {
     "prediction": predicted_class,
     "probabilities": {
